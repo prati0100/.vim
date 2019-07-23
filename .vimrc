@@ -3,3 +3,4 @@ set smartindent
 execute pathogen#infect()
 color dracula
 set colorcolumn=80
+set number
