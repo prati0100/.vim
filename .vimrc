@@ -6,6 +6,7 @@ set colorcolumn=80
 set number
 set guifont=Monospace\ Regular\ 12
 let mapleader = ","
+set showcmd
 
 " Commenting blocks of code.
 autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
