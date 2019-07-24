@@ -29,3 +29,16 @@ nnoremap <Leader>l <C-w>l
 nnoremap <Leader>h <C-w>h
 nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
+
+" Paste from system clipboard
+nnoremap <Leader>p "+p
+
+" Airline config
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Show tab numbers
+let g:airline#extensions#tabline#buffer_nr_show = 1
