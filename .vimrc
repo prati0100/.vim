@@ -1,6 +1,10 @@
 filetype indent on
 set smartindent
+
+" Enable Pathogen
 execute pathogen#infect()
+Helptags
+
 color dracula
 set colorcolumn=80
 set number
