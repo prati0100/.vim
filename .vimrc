@@ -42,3 +42,5 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Show tab numbers
 let g:airline#extensions#tabline#buffer_nr_show = 1
+
+let g:ctrlp_switch_buffer = 'e'
