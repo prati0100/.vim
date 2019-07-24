@@ -42,14 +42,7 @@ nnoremap <Leader>k <C-w>k
 nnoremap <Leader>p "+p
 
 " Airline config
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-
-" Show tab numbers
-let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline_section_warning = []
 
 let g:ctrlp_switch_buffer = 'e'
 
