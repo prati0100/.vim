@@ -51,3 +51,4 @@ let g:ctrlp_switch_buffer = 'e'
 
 " Shortcut to switch to a numbered buffer so I don't have to type ':b' every time
 nnoremap <Leader>b :b<Space>
+nnoremap <Leader>bd :bd<CR>
