@@ -1,3 +1,4 @@
+syntax on
 filetype indent on
 set smartindent
 set hidden
