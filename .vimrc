@@ -1,5 +1,6 @@
 filetype indent on
 set smartindent
+set hidden
 
 " Enable Pathogen
 execute pathogen#infect()
