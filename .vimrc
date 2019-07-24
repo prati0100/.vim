@@ -52,3 +52,13 @@ let g:ctrlp_switch_buffer = 'e'
 " Shortcut to switch to a numbered buffer so I don't have to type ':b' every time
 nnoremap <Leader>b :b<Space>
 nnoremap <Leader>bd :bd<CR>
+
+" Strip trailing whitespace except for the file types in ignoreStripWhitespace
+fun! StripWhitespace()
+	let l:save = winsaveview()
+	keeppatterns %s/\s\+$//e
+	call winrestview(save)
+endfun
+
+let ignoreStripWhitespace = ['plaintext', 'mail', 'diff']
+autocmd BufWritePre * if index(ignoreStripWhitespace, &ft) < 0 | call StripWhitespace()
