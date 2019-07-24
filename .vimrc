@@ -3,7 +3,7 @@ set smartindent
 
 " Enable Pathogen
 execute pathogen#infect()
-Helptags
+Helptags " Generate plugin docs
 
 color dracula
 set colorcolumn=80
