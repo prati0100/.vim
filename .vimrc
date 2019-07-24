@@ -1,6 +1,8 @@
 filetype indent on
 set smartindent
 set hidden
+set wildmenu
+set incsearch
 
 " Enable Pathogen
 execute pathogen#infect()
