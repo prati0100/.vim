@@ -9,6 +9,10 @@ let mapleader = ","
 set showcmd
 set splitright
 
+" Add newlines without going into insert mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
 " Commenting blocks of code.
 autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
 autocmd FileType sh,ruby,python   let b:comment_leader = '# '
