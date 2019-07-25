@@ -15,7 +15,9 @@ augroup END
 execute pathogen#infect()
 Helptags " Generate plugin docs
 
-color dracula
+color gruvbox
+set bg=dark
+
 set colorcolumn=80
 set number
 set guifont=Monospace\ Regular\ 12
