@@ -86,3 +86,9 @@ augroup END
 " For per-project vimrc files
 set exrc
 set secure
+
+" Wrap lengths
+augroup line_wrap
+	autocmd!
+	autocmd FileType mail,diff,gitcommit set textwidth=72
+augroup END
