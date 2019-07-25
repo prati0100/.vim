@@ -22,14 +22,17 @@ nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
 " Commenting blocks of code.
-autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-autocmd FileType conf,fstab,make  let b:comment_leader = '# '
-autocmd FileType tex              let b:comment_leader = '% '
-autocmd FileType mail             let b:comment_leader = '> '
-autocmd FileType vim              let b:comment_leader = '" '
-noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-noremap <silent> <Leader>cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+augroup comment_block
+	autocmd!
+	autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+	autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+	autocmd FileType conf,fstab,make  let b:comment_leader = '# '
+	autocmd FileType tex              let b:comment_leader = '% '
+	autocmd FileType mail             let b:comment_leader = '> '
+	autocmd FileType vim              let b:comment_leader = '" '
+	noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+	noremap <silent> <Leader>cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+augroup END
 
 " Map window switching shortcuts
 nnoremap <Leader>v :vsplit<CR>
@@ -59,4 +62,7 @@ fun! StripWhitespace()
 endfun
 
 let ignoreStripWhitespace = ['plaintext', 'mail', 'diff', 'gitcommit']
-autocmd BufWritePre * if index(ignoreStripWhitespace, &ft) < 0 | call StripWhitespace()
+augroup strip_whitespace
+	autocmd!
+	autocmd BufWritePre * if index(ignoreStripWhitespace, &ft) < 0 | call StripWhitespace()
+augroup END
