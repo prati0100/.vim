@@ -74,3 +74,5 @@ augroup strip_whitespace
 	autocmd!
 	autocmd BufWritePre * if index(ignoreStripWhitespace, &ft) < 0 | call StripWhitespace()
 augroup END
+
+inoremap jj <Esc>
