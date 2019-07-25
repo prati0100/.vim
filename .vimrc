@@ -5,6 +5,12 @@ set hidden
 set wildmenu
 set incsearch
 
+" Since I don't often work with C++, default all .h files to c instead of cpp
+augroup h_filetype
+	autocmd!
+	autocmd BufRead,BufNewFile *.h set filetype=c
+augroup END
+
 " Enable Pathogen
 execute pathogen#infect()
 Helptags " Generate plugin docs
