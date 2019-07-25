@@ -82,3 +82,7 @@ augroup auto_spell
 	autocmd!
 	autocmd FileType mail,diff,gitcommit set spell
 augroup END
+
+" For per-project vimrc files
+set exrc
+set secure
