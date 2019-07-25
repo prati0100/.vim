@@ -76,3 +76,9 @@ augroup strip_whitespace
 augroup END
 
 inoremap jj <Esc>
+
+" Set spellcheck on git commits, mails and patches
+augroup auto_spell
+	autocmd!
+	autocmd FileType mail,diff,gitcommit set spell
+augroup END
