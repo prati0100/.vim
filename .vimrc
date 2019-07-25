@@ -58,5 +58,5 @@ fun! StripWhitespace()
 	call winrestview(save)
 endfun
 
-let ignoreStripWhitespace = ['plaintext', 'mail', 'diff']
+let ignoreStripWhitespace = ['plaintext', 'mail', 'diff', 'gitcommit']
 autocmd BufWritePre * if index(ignoreStripWhitespace, &ft) < 0 | call StripWhitespace()
