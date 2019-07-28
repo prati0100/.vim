@@ -98,3 +98,5 @@ augroup END
 
 " Auto extend comment lines
 set formatoptions+=r
+
+nnoremap <Leader>w :w<CR>
