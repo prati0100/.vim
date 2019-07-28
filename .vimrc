@@ -78,6 +78,7 @@ augroup strip_whitespace
 augroup END
 
 inoremap jj <Esc>
+cnoremap jj <C-c>
 
 " Set spellcheck on git commits, mails and patches
 augroup auto_spell
