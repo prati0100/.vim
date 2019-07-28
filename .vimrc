@@ -92,3 +92,6 @@ augroup line_wrap
 	autocmd!
 	autocmd FileType mail,diff,gitcommit set textwidth=72
 augroup END
+
+" Auto extend comment lines
+set formatoptions+=r
