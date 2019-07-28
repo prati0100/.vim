@@ -49,8 +49,10 @@ nnoremap <Leader>h <C-w>h
 nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
 
-" Paste from system clipboard
+" Paste/yank to/from system clipboard
 nnoremap <Leader>p "+p
+nnoremap <Leader>y "+y
+vnoremap <Leader>y "+y
 
 " Airline config
 let g:airline_section_warning = []
