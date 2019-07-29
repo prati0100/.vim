@@ -103,3 +103,6 @@ nnoremap <Leader>w :w<CR>
 
 " When searching for something, set mark at a for where we start
 nnoremap / ma/
+nnoremap ? ma?
+nnoremap * ma*
+nnoremap # ma#
