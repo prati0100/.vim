@@ -106,3 +106,5 @@ nnoremap / ma/
 nnoremap ? ma?
 nnoremap * ma*
 nnoremap # ma#
+
+nnoremap Y y$
