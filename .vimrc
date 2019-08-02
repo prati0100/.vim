@@ -108,3 +108,8 @@ nnoremap * ma*
 nnoremap # ma#
 
 nnoremap Y y$
+
+set nohlsearch
+
+" Toggle search highlighting
+nnoremap <Leader>s :set hlsearch!<CR>
