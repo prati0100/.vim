@@ -17,7 +17,9 @@ Helptags " Generate plugin docs
 
 " If the terminal does not support underlines, highlight misspelled words by
 " changing their background.
-let g:gruvbox_guisp_fallback = "bg"
+if !has("gui_running")
+	let g:gruvbox_guisp_fallback = "bg"
+endif
 color gruvbox
 set bg=dark
 
