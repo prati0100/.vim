@@ -23,7 +23,7 @@ set bg=dark
 
 set colorcolumn=80
 set number
-set guifont=Monospace\ Regular\ 12
+set guifont=Monospace\ Regular\ 13
 let mapleader = ","
 set showcmd
 set splitright
