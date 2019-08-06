@@ -89,7 +89,7 @@ cnoremap jj <C-c>
 " Set spellcheck on git commits, mails and patches
 augroup auto_spell
 	autocmd!
-	autocmd FileType mail,diff,gitcommit set spell
+	autocmd FileType mail,diff,gitcommit,text set spell
 augroup END
 
 " For per-project vimrc files
