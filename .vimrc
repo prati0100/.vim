@@ -69,6 +69,7 @@ let g:ctrlp_switch_buffer = 'e'
 nnoremap <Leader>b :b<Space>
 nnoremap <Leader>bd :bd<CR>
 nnoremap <Leader>bb :b#<CR>
+nnoremap <Leader>bl :ls<CR>
 
 " Strip trailing whitespace except for the file types in ignoreStripWhitespace
 fun! StripWhitespace()
