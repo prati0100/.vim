@@ -103,8 +103,12 @@ augroup line_wrap
 	autocmd FileType mail,diff,gitcommit set textwidth=72
 augroup END
 
-" Auto extend comment lines
-set formatoptions+=r
+" Use different format options for mail and code.
+set formatoptions=croqaj
+augroup format_options
+	autocmd!
+	autocmd FileType mail,diff,gitcommit set formatoptions=trqlanw
+augroup END
 
 nnoremap <Leader>w :w<CR>
 
