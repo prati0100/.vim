@@ -32,7 +32,7 @@ set splitright
 
 " Add newlines without going into insert mode
 nmap <S-Enter> O<Esc>
-nmap <CR> i<CR><Esc>
+nmap <CR> o<Esc>
 
 " Commenting blocks of code.
 augroup comment_block
