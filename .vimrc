@@ -125,3 +125,7 @@ set nohlsearch
 
 " Toggle search highlighting
 nnoremap <Leader>s :set hlsearch!<CR>
+
+" Quick binding to set filetype for git-send-email files I open from mutt and
+" turn off spelling.
+nnoremap <Leader>se :set ft=gitsendemail<CR>:set nospell<CR>
