@@ -132,3 +132,5 @@ nnoremap <Leader>se :set ft=gitsendemail<CR>:set nospell<CR>
 
 " Toggle spelling
 nnoremap <Leader>sp :set nospell!<CR>
+
+nnoremap <Leader>= <C-W>
