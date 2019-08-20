@@ -34,21 +34,6 @@ augroup format_options
 	autocmd FileType mail,diff,gitcommit set formatoptions=trqlanw
 augroup END
 
-" Commenting blocks of code.
-augroup comment_block
-	autocmd!
-	autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-	autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-	autocmd FileType conf,fstab,make  let b:comment_leader = '# '
-	autocmd FileType tcl,neomuttrc    let b:comment_leader = '# '
-	autocmd FileType tex              let b:comment_leader = '% '
-	autocmd FileType mail             let b:comment_leader = '> '
-	autocmd FileType vim              let b:comment_leader = '" '
-	autocmd FileType lua              let b:comment_leader = '-- '
-	noremap <silent> <Leader>cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-	noremap <silent> <Leader>cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
-augroup END
-
 " Since I don't often work with C++, default all .h files to c instead of cpp
 augroup h_filetype
 	autocmd!
