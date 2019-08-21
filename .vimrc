@@ -81,8 +81,8 @@ let g:ctrlp_switch_buffer = 'e'
 " ---- Mappings: ----
 
 " Add newlines without going into insert mode
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+nnoremap <S-Enter> O<Esc>
+nnoremap <CR> o<Esc>
 
 " Map window switching shortcuts
 nnoremap <Leader>v :vsplit<CR>
