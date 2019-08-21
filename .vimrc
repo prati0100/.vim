@@ -102,9 +102,6 @@ nnoremap <Leader>bd :bd<CR>
 nnoremap <Leader>bb :b#<CR>
 nnoremap <Leader>bl :ls<CR>
 
-inoremap jj <Esc>
-cnoremap jj <C-c>
-
 nnoremap <Leader>w :w<CR>
 
 " When searching for something, set mark at a for where we start
