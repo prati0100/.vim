@@ -70,6 +70,13 @@ augroup line_wrap
 	autocmd FileType mail,diff,gitcommit set textwidth=72
 augroup END
 
+" vim-fugitive by default collapses the diff body when viewing commits. Don't
+" do that.
+augroup fugitive_no_fold
+	autocmd!
+	autocmd FileType git set nofoldenable
+augroup END
+
 " ---- Plugin configs: ----
 
 " Airline
