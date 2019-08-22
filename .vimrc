@@ -81,6 +81,7 @@ augroup END
 
 " Airline
 let g:airline_section_warning = []
+let g:airline_powerline_fonts = 1
 
 " Ctrl-P
 let g:ctrlp_switch_buffer = 'e'
