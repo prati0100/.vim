@@ -70,11 +70,17 @@ augroup line_wrap
 	autocmd FileType mail,diff,gitcommit set textwidth=72
 augroup END
 
-" vim-fugitive by default collapses the diff body when viewing commits. Don't
-" do that.
-augroup fugitive_no_fold
+augroup fugitive_config
 	autocmd!
+	" vim-fugitive by default collapses the diff body when viewing
+	" commits. Don't do that.
 	autocmd FileType git set nofoldenable
+	" Mappings for signoff commits. Using 'cs' in the mappings adds
+	" delay to the 'cs' binding for squash! commits, but let's see
+	" how it pans out.
+	autocmd FileType fugitive
+		\ nnoremap csc :Gcommit -vs<CR> |
+		\ nnoremap css :Gcommit -s<CR>
 augroup END
 
 " ---- Plugin configs: ----
