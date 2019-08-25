@@ -12,7 +12,7 @@ color gruvbox
 
 filetype indent on
 
-let mapleader = ","
+let mapleader = ' '
 
 set smartindent
 set hidden
