@@ -25,6 +25,7 @@ set guifont=Monospace\ Regular\ 13
 set showcmd
 set splitright
 set nohlsearch
+set go+=c
 
 " For per-project vimrc files
 set exrc
