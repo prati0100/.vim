@@ -28,3 +28,6 @@
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "bundle/i3config.vim"]
+	path = bundle/i3config.vim
+	url = https://github.com/mboughaba/i3config.vim.git
