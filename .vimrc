@@ -84,6 +84,12 @@ augroup fugitive_config
 		\ nnoremap css :Gcommit -s<CR>
 augroup END
 
+" Comment strings for vim-commentary
+augroup comment_strings
+	autocmd!
+	autocmd FileType mail setlocal commentstring=>\ %s
+augroup END
+
 " ---- Plugin configs: ----
 
 " Airline
