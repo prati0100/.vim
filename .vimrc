@@ -21,7 +21,7 @@ set incsearch
 set bg=dark
 set colorcolumn=80
 set number
-set guifont=Monospace\ Regular\ 13
+set guifont=DejaVu\ Sans\ Mono\ Book\ 13
 set showcmd
 set splitright
 set nohlsearch
