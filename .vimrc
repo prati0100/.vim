@@ -26,6 +26,7 @@ set showcmd
 set splitright
 set nohlsearch
 set go+=c
+set nojoinspaces
 
 " For per-project vimrc files
 set exrc
