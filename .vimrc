@@ -145,3 +145,5 @@ nnoremap <Leader>se :set ft=gitsendemail<CR>:set nospell<CR>
 nnoremap <Leader>sp :set nospell!<CR>
 
 nnoremap <Leader>= <C-W>
+
+nnoremap 22 @@
