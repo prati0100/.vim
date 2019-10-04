@@ -63,7 +63,7 @@ augroup END
 " Set spellcheck on git commits, mails and patches
 augroup auto_spell
 	autocmd!
-	autocmd FileType mail,diff,gitcommit,text set spell
+	autocmd FileType mail,diff,gitcommit,text,markdown set spell
 augroup END
 
 " Wrap lengths
