@@ -100,6 +100,9 @@ let g:airline_powerline_fonts = 1
 " Ctrl-P
 let g:ctrlp_switch_buffer = 'e'
 
+" Disable bufferline echo
+let g:bufferline_echo = 0
+
 " ---- Mappings: ----
 
 " Add newlines without going into insert mode
