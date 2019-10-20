@@ -31,3 +31,6 @@
 [submodule "bundle/i3config.vim"]
 	path = bundle/i3config.vim
 	url = https://github.com/mboughaba/i3config.vim.git
+[submodule "bundle/vim-buffergator"]
+	path = bundle/vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator.git

@@ -100,6 +100,9 @@ let g:airline_powerline_fonts = 1
 " Ctrl-P
 let g:ctrlp_switch_buffer = 'e'
 
+" Disable default buffergator bindings
+let g:buffergator_suppress_keymaps = 1
+
 " Disable bufferline echo
 let g:bufferline_echo = 0
 
@@ -122,10 +125,11 @@ nnoremap <Leader>y "+y
 vnoremap <Leader>y "+y
 
 " Mappings for handling buffers
-nnoremap <Leader>b :b<Space>
+nnoremap <Leader>b :b
+nnoremap <Leader>bb :BuffergatorOpen<CR>
 nnoremap <Leader>bd :bd<CR>
-nnoremap <Leader>bb :b#<CR>
 nnoremap <Leader>bl :ls<CR>
+nnoremap <Leader>bp :b#<CR>
 
 nnoremap <Leader>w :w<CR>
 
