@@ -106,6 +106,18 @@ let g:buffergator_suppress_keymaps = 1
 " Disable bufferline echo
 let g:bufferline_echo = 0
 
+" Obsession
+"
+" This will disable saving of session on buffer creation and change in
+" vim-obsession because switching buffers gets really slow, especially on a
+" hard disk.
+"
+" This means that the session will only be saved on exit, and if vim crashes,
+" the session won't be saved, but I don't really care that much about my
+" sessions. Performance is more important.
+
+let g:obsession_no_bufenter = 1
+
 " ---- Mappings: ----
 
 " Add newlines without going into insert mode
