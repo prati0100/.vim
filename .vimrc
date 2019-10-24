@@ -166,3 +166,7 @@ nnoremap <Leader>sp :set nospell!<CR>
 nnoremap <Leader>= <C-W>
 
 nnoremap 22 @@
+
+" Select the recently pasted text in visual mode, just like gv does for
+" recently selected text.
+nnoremap gp `[v`]
