@@ -133,6 +133,9 @@ nnoremap <Leader>h <C-w>h
 nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
 
+nnoremap <Leader>H <C-w>H
+nnoremap <Leader>L <C-w>L
+
 " Paste/yank to/from system clipboard
 nnoremap <Leader>p "+p
 nnoremap <Leader>y "+y
