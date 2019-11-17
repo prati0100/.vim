@@ -29,6 +29,12 @@ set go+=c
 set nojoinspaces
 set linebreak
 
+" For MUComplete
+set completeopt+=menuone
+set completeopt+=noselect
+set previewheight=2
+set shortmess+=c
+
 " For per-project vimrc files
 set exrc
 set secure
@@ -119,6 +125,15 @@ let g:bufferline_echo = 0
 " sessions. Performance is more important.
 
 let g:obsession_no_bufenter = 1
+
+" MUComplete
+let g:mucomplete#enable_auto_at_startup = 1
+
+" Right now, completion doesn't work very well in Tcl files. So, set it to use
+" tags to make it a little better.
+let g:mucomplete#chains = {
+	\ 'tcl' : ['path', 'tags', 'c-n', 'c-p', 'incl']
+	\ }
 
 " ---- Mappings: ----
 
