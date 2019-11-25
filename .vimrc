@@ -133,9 +133,6 @@ let g:mucomplete#enable_auto_at_startup = 1
 " Autocompletion sources for various file types.
 let g:mucomplete#chains = {
 	\ 'tcl'          : ['path', 'tags', 'c-n', 'c-p', 'incl'],
-	\ 'gitcommit'    : ['dict', 'keyp', 'keyn'],
-	\ 'mail'         : ['dict', 'keyp', 'keyn'],
-	\ 'gitsendemail' : ['dict', 'keyp', 'keyn'],
 	\ }
 
 " Fugitive convenience comm
