@@ -138,6 +138,9 @@ let g:mucomplete#chains = {
 	\ 'gitsendemail' : ['dict', 'keyp', 'keyn'],
 	\ }
 
+" Fugitive convenience comm
+:command Glogb Glog master..
+
 " ---- Mappings: ----
 
 " Add newlines without going into insert mode
