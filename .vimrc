@@ -46,8 +46,10 @@ set secure
 set formatoptions=croqaj
 augroup format_options
 	autocmd!
-	autocmd FileType mail,markdown set formatoptions=trqlanw
-	autocmd FileType gitcommit,diff set formatoptions=trqlan
+	autocmd FileType mail,markdown setlocal formatoptions=trqlanw |
+		\ setlocal nosmartindent
+	autocmd FileType gitcommit,diff setlocal formatoptions=trqlan |
+		\ setlocal nosmartindent
 augroup END
 
 " Since I don't often work with C++, default all .h files to c instead of cpp
