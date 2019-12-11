@@ -139,8 +139,10 @@ let g:mucomplete#chains = {
 	\ 'tcl'          : ['path', 'tags', 'c-n', 'c-p', 'incl'],
 	\ }
 
-" Fugitive convenience comm
+" Fugitive convenience commands
 :command Glogb Glog master..
+:command -nargs=* Gp Gpush <args>
+:command -nargs=* Gpf Gpush -f <args>
 
 " ---- Mappings: ----
 
