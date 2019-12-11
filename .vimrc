@@ -110,6 +110,8 @@ let g:airline_powerline_fonts = 1
 
 " Ctrl-P
 let g:ctrlp_switch_buffer = 'e'
+let g:ctrlp_user_command =
+	\ ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " Disable default buffergator bindings
 let g:buffergator_suppress_keymaps = 1
