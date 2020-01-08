@@ -28,6 +28,7 @@ set nohlsearch
 set go+=c
 set nojoinspaces
 set linebreak
+set ttimeoutlen=0
 
 " For MUComplete
 set completeopt+=menuone
