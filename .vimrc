@@ -29,6 +29,7 @@ set go+=c
 set nojoinspaces
 set linebreak
 set ttimeoutlen=0
+set backspace=indent,start
 set commentstring=#\ %s
 
 " For MUComplete
