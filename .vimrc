@@ -29,6 +29,7 @@ set go+=c
 set nojoinspaces
 set linebreak
 set ttimeoutlen=0
+set commentstring=#\ %s
 
 " For MUComplete
 set completeopt+=menuone
@@ -101,6 +102,9 @@ augroup END
 augroup comment_strings
 	autocmd!
 	autocmd FileType mail setlocal commentstring=>\ %s
+	autocmd FileType lua setlocal commentstring=--\ %s
+	autocmd FileType c setlocal commentstring=//\ %s
+	autocmd FileType vim setlocal commentstring="\ %s
 augroup END
 
 " ---- Plugin configs: ----
