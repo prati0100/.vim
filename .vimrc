@@ -51,7 +51,7 @@ augroup format_options
 	autocmd!
 	autocmd FileType mail,markdown setlocal formatoptions=trqlanw |
 		\ setlocal nosmartindent
-	autocmd FileType gitcommit,diff setlocal formatoptions=trqlan |
+	autocmd FileType gitcommit,diff,gitsendemail setlocal formatoptions=trqlan |
 		\ setlocal nosmartindent
 augroup END
 
@@ -83,7 +83,7 @@ augroup END
 " Wrap lengths
 augroup line_wrap
 	autocmd!
-	autocmd FileType mail,diff,gitcommit set textwidth=72
+	autocmd FileType mail,diff,gitcommit,gitsendemail set textwidth=72
 augroup END
 
 augroup fugitive_config
