@@ -108,6 +108,11 @@ augroup comment_strings
 	autocmd FileType vim setlocal commentstring="\ %s
 augroup END
 
+augroup omni
+	autocmd!
+	autocmd FileType c setlocal omnifunc=ccomplete#Complete
+augroup END
+
 " ---- Plugin configs: ----
 
 " Airline
