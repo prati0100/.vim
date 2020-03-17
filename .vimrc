@@ -146,6 +146,9 @@ let g:obsession_no_bufenter = 1
 
 " MUComplete
 let g:mucomplete#enable_auto_at_startup = 1
+let g:mucomplete#tab_when_no_results = 1
+let g:mucomplete#minimum_prefix_length = 4
+let g:mucomplete#completion_delay = 350
 
 " Autocompletion sources for various file types.
 let g:mucomplete#chains = {
