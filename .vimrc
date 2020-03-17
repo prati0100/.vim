@@ -29,6 +29,8 @@ set go+=c
 set nojoinspaces
 set linebreak
 set ttimeoutlen=0
+set notimeout
+set ttimeout
 set backspace=indent,start,eol
 set commentstring=#\ %s
 
