@@ -216,6 +216,14 @@ nnoremap 22 @@
 " recently selected text.
 nnoremap gp `[v`]
 
+" ---- Custom functions ----
+
+" Trigger completion in C buffers only when there are at least four keyword
+" chars before the cursor
+let s:c_cond = { t -> t =~# '\k\{4}$' }
+let g:mucomplete#can_complete = {}
+let g:mucomplete#can_complete.c = { 'omni': s:c_cond }
+
 fun! s:dismiss_or_delete()
 	return pumvisible()
 		\ && len(matchstr(getline('.'), '\S*\%'.col('.').'c')) <= get(g:, 'mucomplete#minimum_prefix_length', 4)
