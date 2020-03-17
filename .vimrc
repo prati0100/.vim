@@ -215,3 +215,11 @@ nnoremap 22 @@
 " Select the recently pasted text in visual mode, just like gv does for
 " recently selected text.
 nnoremap gp `[v`]
+
+fun! s:dismiss_or_delete()
+	return pumvisible()
+		\ && len(matchstr(getline('.'), '\S*\%'.col('.').'c')) <= get(g:, 'mucomplete#minimum_prefix_length', 4)
+		\ ? "\<c-e>\<bs>" : "\<bs>"
+
+endf
+inoremap <expr> <bs> <sid>dismiss_or_delete()
