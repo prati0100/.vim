@@ -216,6 +216,9 @@ nnoremap 22 @@
 " recently selected text.
 nnoremap gp `[v`]
 
+nnoremap <Leader>-a :set fo-=a<CR>
+nnoremap <Leader>+a :set fo+=a<CR>
+
 " ---- Custom functions ----
 
 " Trigger completion in C buffers only when there are at least four keyword
