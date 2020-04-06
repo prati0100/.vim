@@ -102,7 +102,7 @@ augroup comment_strings
 	autocmd FileType mail setlocal commentstring=>\ %s
 	autocmd FileType lua setlocal commentstring=--\ %s
 	autocmd FileType c setlocal commentstring=//\ %s
-	autocmd FileType vim setlocal commentstring="\ %s
+	autocmd FileType vim setlocal commentstring=\"\ %s
 augroup END
 
 augroup omni
