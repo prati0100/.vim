@@ -1,13 +1,14 @@
+let mapleader = ' '
+let maplocalleader = ','
+syntax on
+filetype plugin on
+filetype indent on
+
 " Enable Pathogen
 execute pathogen#infect()
 Helptags " Generate plugin docs
 
-syntax on
 color gruvbox
-
-filetype indent on
-
-let mapleader = ' '
 
 set smartindent
 set hidden
