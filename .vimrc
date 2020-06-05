@@ -89,12 +89,6 @@ augroup fugitive_config
 	" vim-fugitive by default collapses the diff body when viewing
 	" commits. Don't do that.
 	autocmd FileType git set nofoldenable
-	" Mappings for signoff commits. Using 'cs' in the mappings adds
-	" delay to the 'cs' binding for squash! commits, but let's see
-	" how it pans out.
-	autocmd FileType fugitive
-		\ nnoremap csc :Gcommit -vs<CR> |
-		\ nnoremap css :Gcommit -s<CR>
 augroup END
 
 " Comment strings for vim-commentary
