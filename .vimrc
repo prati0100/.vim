@@ -17,6 +17,7 @@ set incsearch
 set bg=dark
 set colorcolumn=80
 set number
+set relativenumber
 set guifont=Inconsolata\ Regular\ 14
 set showcmd
 set splitright
@@ -29,6 +30,8 @@ set notimeout
 set ttimeout
 set backspace=indent,start,eol
 set commentstring=#\ %s
+set cursorline
+set cursorlineopt=number
 
 " For MUComplete
 set completeopt+=menuone
