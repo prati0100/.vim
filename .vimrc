@@ -105,7 +105,7 @@ augroup END
 
 augroup omni
 	autocmd!
-	autocmd FileType c setlocal omnifunc=ccomplete#Complete
+	autocmd FileType c setlocal omnifunc=lsp#complete
 augroup END
 
 augroup quickfix
@@ -134,7 +134,6 @@ let g:bufferline_echo = 0
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#tab_when_no_results = 1
 let g:mucomplete#minimum_prefix_length = 4
-let g:mucomplete#completion_delay = 350
 
 " Autocompletion sources for various file types.
 let g:mucomplete#chains = {
@@ -203,18 +202,25 @@ nnoremap gp `[v`]
 nnoremap <Leader>-a :set fo-=a<CR>
 nnoremap <Leader>+a :set fo+=a<CR>
 
-" ---- Custom functions ----
 
-" Trigger completion in C buffers only when there are at least four keyword
-" chars before the cursor
-let s:c_cond = { t -> t =~# '\k\{4}$' }
-let g:mucomplete#can_complete = {}
-let g:mucomplete#can_complete.c = { 'omni': s:c_cond }
+if executable('cquery') && filereadable('compile_commands.json')
+   au User lsp_setup call lsp#register_server({
+      \ 'name': 'cquery',
+      \ 'cmd': {server_info->['cquery']},
+      \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
+      \ 'initialization_options': { 'cacheDirectory': '/home/pratyush/.cquery-cache/' },
+      \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
+      \ })
+endif
 
-fun! s:dismiss_or_delete()
-	return pumvisible()
-		\ && len(matchstr(getline('.'), '\S*\%'.col('.').'c')) <= get(g:, 'mucomplete#minimum_prefix_length', 4)
-		\ ? "\<c-e>\<bs>" : "\<bs>"
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> <f2> <plug>(lsp-rename)
+endfunction
 
-endf
-inoremap <expr> <bs> <sid>dismiss_or_delete()
+augroup lsp_install
+    au!
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
