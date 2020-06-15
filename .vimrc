@@ -108,6 +108,11 @@ augroup omni
 	autocmd FileType c setlocal omnifunc=ccomplete#Complete
 augroup END
 
+augroup quickfix
+	autocmd!
+	autocmd FileType qf setlocal norelativenumber
+augroup END
+
 " ---- Plugin configs: ----
 
 " Airline
