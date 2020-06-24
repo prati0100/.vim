@@ -197,6 +197,8 @@ nnoremap gp `[v`]
 nnoremap <Leader>-a :set fo-=a<CR>
 nnoremap <Leader>+a :set fo+=a<CR>
 
+nnoremap <C-P> :Files<CR>
+
 
 if executable('cquery') && filereadable('compile_commands.json')
    au User lsp_setup call lsp#register_server({
