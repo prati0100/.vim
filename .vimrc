@@ -22,7 +22,7 @@ set guifont=Inconsolata\ Regular\ 14
 set showcmd
 set splitright
 set nohlsearch
-set go+=c
+set guioptions=ac
 set nojoinspaces
 set linebreak
 set ttimeoutlen=0
