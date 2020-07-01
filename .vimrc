@@ -182,6 +182,8 @@ nnoremap <Leader>k <C-w>k
 
 nnoremap <Leader>H <C-w>H
 nnoremap <Leader>L <C-w>L
+nnoremap <Leader>K <C-w>K
+nnoremap <Leader>J <C-w>J
 
 " Paste/yank to/from system clipboard
 nnoremap <Leader>p "+p
