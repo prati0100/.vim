@@ -113,6 +113,33 @@ augroup quickfix
 	autocmd FileType qf setlocal norelativenumber
 augroup END
 
+augroup org
+	autocmd!
+	" Highlight ticked checkboxes as comments
+
+	" Ugh! This is so ugly. It is simple to highlight done checkboxes as
+	" comments if you assume they will only be one line. But I often have
+	" long text in them and want them to be multi-line.
+	"
+	" And so this pattern comes in the picture. The start condition is
+	" simple: any line that starts with "   - [X]". The problem is the end
+	" pattern. Right now this is a hack that ends the pattern if either of
+	" the 3 conditions are met:
+	"
+	" 1. The line starts with "   -"
+	" 2. The line starts with non-whitespace. This includes "*", etc.
+	" 3. The line is blank.
+	"
+	" The "me=s-1" says that the end of region should be considered at
+	" _before_ the start of matched patter.
+	"
+	" I am sure this misses a huge number of corner cases. But until I
+	" learn writing vim syntax highlighting in Python this seems like my
+	" best bet.
+	autocmd FileType org syntax region MyOrgDone start='^\s\+- \[X\].*' end='^\s\+-\|^\S\|^$'me=s-1
+	autocmd FileType org highlight default link MyOrgDone Comment
+augroup END
+
 " ---- Plugin configs: ----
 
 " Airline
