@@ -187,7 +187,9 @@ nnoremap <Leader>J <C-w>J
 
 " Paste/yank to/from system clipboard
 nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
 nnoremap <Leader>y "+y
+nnoremap <Leader>Y "+y$
 vnoremap <Leader>y "+y
 
 " Mappings for handling buffers
