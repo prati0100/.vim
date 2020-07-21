@@ -92,6 +92,7 @@ augroup fugitive_config
 	" vim-fugitive by default collapses the diff body when viewing
 	" commits. Don't do that.
 	autocmd FileType git set nofoldenable
+	autocmd FileType fugitive nmap <Tab> =
 augroup END
 
 " Comment strings for vim-commentary
