@@ -139,6 +139,8 @@ augroup org
 	" best bet.
 	autocmd FileType org syntax region MyOrgDone start='^\s\+- \[X\].*' end='^\s\+-\|^\S\|^$'me=s-1
 	autocmd FileType org highlight default link MyOrgDone Comment
+
+	autocmd FileType org set colorcolumn=0 fo-=a nofoldenable
 augroup END
 
 " ---- Plugin configs: ----
