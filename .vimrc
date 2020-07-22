@@ -142,6 +142,7 @@ augroup org
 	autocmd FileType org highlight default link MyOrgDone Comment
 
 	autocmd FileType org setlocal cc=0 fo-=a nofoldenable sw=2 et sts=2
+	autocmd FileType org nnoremap <silent> <Leader>D :call <SID>orgmode_todo_archive()<CR>
 augroup END
 
 " ---- Plugin configs: ----
@@ -256,3 +257,22 @@ augroup lsp_install
     au!
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+" Move org mode todo item to archive (done.org)
+function! s:orgmode_todo_archive()
+	" Delete the subtree into the @0 register.
+	normal "0dar
+	let l:tree = @0
+	let l:data = split(l:tree, '\n')
+
+	" See if done.org can be found
+	let l:target_dir = expand('%:p:h')
+	let l:todo_file = expand('%:p')
+	let l:done_file = substitute(l:todo_file, 'todo.org$', 'done.org', '')
+	if !filewritable(l:done_file) && !filewritable(l:target_dir)
+		echoerr "Can't write to file 'done.org'"
+		return
+	endif
+
+	call writefile(l:data, l:done_file, "a")
+endfunction
