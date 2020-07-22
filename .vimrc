@@ -250,10 +250,11 @@ if executable('cquery') && filereadable('compile_commands.json')
 endif
 
 function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
-    setlocal signcolumn=yes
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> <f2> <plug>(lsp-rename)
+	setlocal omnifunc=lsp#complete
+	setlocal signcolumn=yes
+	nmap <buffer> gd <plug>(lsp-definition)
+	nmap <buffer> <Leader>cr <plug>(lsp-rename)
+	nmap <buffer> <Leader>ce <plug>(lsp-document-diagnostics)
 endfunction
 
 augroup lsp_install
