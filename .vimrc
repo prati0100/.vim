@@ -92,6 +92,7 @@ augroup fugitive_config
 	" vim-fugitive by default collapses the diff body when viewing
 	" commits. Don't do that.
 	autocmd FileType git set nofoldenable
+	autocmd FileType git nnoremap <silent> yh :let @+ = fugitive#Object(@%)<CR>
 	autocmd FileType fugitive nmap <Tab> =
 augroup END
 
