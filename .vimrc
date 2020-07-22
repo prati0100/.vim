@@ -236,6 +236,9 @@ nnoremap <Leader>+a :set fo+=a<CR>
 nnoremap <C-P> :Files<CR>
 
 
+" ---- Custom Functions ----
+
+" Load cquery as LSP for C
 if executable('cquery') && filereadable('compile_commands.json')
    au User lsp_setup call lsp#register_server({
       \ 'name': 'cquery',
