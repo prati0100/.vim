@@ -235,6 +235,7 @@ nnoremap <Leader>+a :set fo+=a<CR>
 
 nnoremap <C-P> :Files<CR>
 
+nnoremap <silent> <Leader>* :call <SID>rg()<CR>
 
 " ---- Custom Functions ----
 
@@ -279,4 +280,9 @@ function! s:orgmode_todo_archive()
 	endif
 
 	call writefile(l:data, l:done_file, "a")
+endfunction
+
+function! s:rg()
+	let l:word = expand("<cword>")
+	exe ":Rg " . l:word
 endfunction
