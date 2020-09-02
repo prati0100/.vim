@@ -145,6 +145,17 @@ augroup org
 	autocmd FileType org nnoremap <silent> <Leader>D :call <SID>orgmode_todo_archive()<CR>
 augroup END
 
+augroup agit
+	autocmd!
+	" If I hit <Leader>l and I'm in the upper half of the log, it will
+	" move me to the stat window. I do not want to go to the stat very
+	" often. So instead make <Leader>l go left and down. That will always
+	" land me in the diff window. Then I can use <Leader>k to go to stats
+	" if I want.
+	autocmd FileType agit nnoremap <Leader>l <C-w>b
+	autocmd FileType agit set colorcolumn=0
+augroup END
+
 " ---- Plugin configs: ----
 
 " Airline
@@ -171,6 +182,9 @@ let g:mucomplete#chains = {
 :command Glogb Glog master..
 :command -nargs=* Gp Gpush <args>
 :command -nargs=* Gpf Gpush -f <args>
+
+" Agit
+let g:agit_max_author_name_width = -1
 
 " ---- Mappings: ----
 
