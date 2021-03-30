@@ -50,9 +50,9 @@ set secure
 set formatoptions=croqaj
 augroup format_options
 	autocmd!
-	autocmd FileType mail,markdown setlocal formatoptions=trqlanw |
+	autocmd FileType mail,markdown setlocal formatoptions=trqla2w |
 		\ setlocal nosmartindent
-	autocmd FileType gitcommit,diff,gitsendemail setlocal formatoptions=trqlan |
+	autocmd FileType gitcommit,diff,gitsendemail setlocal formatoptions=trqla2 |
 		\ setlocal nosmartindent
 augroup END
 
