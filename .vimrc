@@ -252,30 +252,6 @@ nnoremap <silent> <Leader>* :call <SID>rg()<CR>
 
 " ---- Custom Functions ----
 
-" Load cquery as LSP for C
-if executable('cquery') && filereadable('compile_commands.json')
-   au User lsp_setup call lsp#register_server({
-      \ 'name': 'cquery',
-      \ 'cmd': {server_info->['cquery']},
-      \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
-      \ 'initialization_options': { 'cacheDirectory': '/home/pratyush/.cquery-cache/' },
-      \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
-      \ })
-endif
-
-function! s:on_lsp_buffer_enabled() abort
-	setlocal omnifunc=lsp#complete
-	setlocal signcolumn=yes
-	nmap <buffer> gd <plug>(lsp-definition)
-	nmap <buffer> <Leader>cr <plug>(lsp-rename)
-	nmap <buffer> <Leader>ce <plug>(lsp-document-diagnostics)
-endfunction
-
-augroup lsp_install
-    au!
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
-
 " Move org mode todo item to archive (done.org)
 function! s:orgmode_todo_archive()
 	" Delete the subtree into the @0 register.
