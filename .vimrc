@@ -31,6 +31,7 @@ set ttimeout
 set backspace=indent,start,eol
 set commentstring=#\ %s
 set cursorline
+set tabstop=8
 
 " For MUComplete
 set completeopt+=menuone
