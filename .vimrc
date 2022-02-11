@@ -251,6 +251,8 @@ nnoremap <C-P> :Files<CR>
 
 nnoremap <silent> <Leader>* :call <SID>rg()<CR>
 
+nnoremap <Leader>gr iReviewed-by: Pratyush Yadav <p.yadav@ti.com><ESC>
+
 " ---- Custom Functions ----
 
 " Move org mode todo item to archive (done.org)
