@@ -251,7 +251,7 @@ nnoremap <C-P> :Files<CR>
 
 nnoremap <silent> <Leader>* :call <SID>rg()<CR>
 
-nnoremap <Leader>gr iReviewed-by: Pratyush Yadav <p.yadav@ti.com><ESC>
+nnoremap <Leader>gr iReviewed-by: Pratyush Yadav <ptyadav@amazon.de><ESC>
 
 " ---- Custom Functions ----
 
