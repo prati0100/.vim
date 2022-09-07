@@ -156,6 +156,12 @@ augroup agit
 	autocmd FileType agit set colorcolumn=0
 augroup END
 
+augroup mail_external
+	autocmd!
+	autocmd FileType mail :silent! %s/\(Subject:.*\)\[EXTERNAL\]\s*/\1/ |
+		\ :silent! g/CAUTION: This email originated from outside of the organization. Do not click links or open attachments unless you can confirm the sender and know the content is safe.$/,+3d
+augroup END
+
 " ---- Plugin configs: ----
 
 " Airline
